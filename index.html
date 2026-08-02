@@ -622,7 +622,7 @@ async function submitForm(){
     if(WEBHOOK_URL && WEBHOOK_URL.indexOf('PASTE_YOUR') === -1){
       await fetch(WEBHOOK_URL, {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: {'Content-Type': 'text/plain;charset=utf-8'},
         body: JSON.stringify(payload)
       });
     } else {
