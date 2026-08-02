@@ -543,7 +543,7 @@ textarea{ min-height:110px; }
 </div>
 
 <script>
-const WEBHOOK_URL = "PASTE_YOUR_MAKE_WEBHOOK_URL_HERE";
+const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbytCa5Jhmxlizjp5obnDpcMrKU4slXKF1HORqaiFisJwOTLX2fqxddGuTB1pepzSlafsw/exec";
 
 const answers = {};
 const stepOrder = ['intro','q1','q2','q3','q4','q5','q6','q7','q7a','q8','contact'];
@@ -619,7 +619,7 @@ async function submitForm(){
   };
 
   try{
-    if(WEBHOOK_URL && WEBHOOK_URL.indexOf('PASTE_YOUR') === -1){
+    if(WEBHOOK_URL && WEBHOOK_URL.indexOf('https://script.google.com/macros/s/AKfycbytCa5Jhmxlizjp5obnDpcMrKU4slXKF1HORqaiFisJwOTLX2fqxddGuTB1pepzSlafsw/exec') === -1){
       await fetch(WEBHOOK_URL, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
